@@ -54,10 +54,6 @@ function valid_password($mdp,$cmdp)
 				echo "<h3>Le mdp doit contenir au moins 6 caracteres</h3>";
 			}
 }
-$donnees='SAMBA';
-$mdp='2005555';
-$cmdp='2005555';
- valid_Nom($donnees);
- valid_Prenom($donnees);
- valid_password($mdp,$cmdp);
+
+
 ?>

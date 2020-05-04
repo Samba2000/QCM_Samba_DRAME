@@ -7,7 +7,7 @@
 <body style="text-align: center;">
   <div style="background-color: black;
     height: 100px;">
-<div style="background-image: url(../img/logo1.png);
+<div style="background-image: url((../img/logo1.png));
     background-size: 40% ;
     height: 90px;
     width: 10%;
@@ -66,7 +66,7 @@
 			{
 			 $dossier = './asset/img/';
 				//efectuer une action
-				$data=file_get_contents("../json/user.json");
+				$data=file_get_contents("./asset/json/user.json");
         $data=json_decode($data, true);
 
 						$membres_Admin['prenom'] = $_POST['prenom'];
@@ -83,7 +83,7 @@
           if ($membres_Admin['login']!=$data[$i]['login']) 
           {
   
-            $js = file_get_contents('../json/user.json');
+            $js = file_get_contents('./asset/json/user.json');
 
             $js = json_decode($js, true);
 
@@ -91,7 +91,7 @@
 
             $js = json_encode($js);
           
-            file_put_contents("../json/user.json", $js);
+            file_put_contents("./asset/json/user.json", $js);
           
           
           header("location: jouer.php");

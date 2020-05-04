@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Inscription</title>
+	<title>Creer Admin</title>
 	<meta charset="utf-8">
 </head>
 <body >
   <form  method="POST" action="">
     <div style="margin-left: 2%;">
-  <div style="font-size: 35px; font-family: arial">S'inscrire</div>
+  <div style="font-size: 35px; font-family: arial;">S'inscrire</div>
   <div style="font-size: 15px; font-family: arial">Pour proposer des QUIZZ</div><br>
   <b>Prenom</p>
   <div style="width: 100%;margin-bottom: 1%">

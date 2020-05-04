@@ -62,11 +62,17 @@
 			        }
 			      }
 		    echo "</fieldset>";
-		  	//On parcouris avec un boucle for le nbre de page
-		  	for ($i=1; $i <= $nbreDePage; $i++) { 
-		    //On affiche leurs numeros avec des liens hrefs
-		    echo ' <a href="index.php?lien=accueil&nomv=3&page='.$i.'"><h3 style="float: right; background-color: darkturquoise; width: 63px;">'.$i.'</h3></a>';
-		  	}
+			  //On parcouris avec un boucle for le nbre de page
+			  if($PageEncour!=1)
+			  {
+				  $pre=$PageEncour-1;
+				  echo ' <a href="index.php?lien=accueil&nomv=3&page='.$pre.'"><h3 style="float: left; background-color: darkturquoise; width: 80px;">Precedent</h3></a>';
+			  }
+			  if($PageEncour<$nbreDePage)
+			  {
+				  $suiv=$PageEncour+1;
+				  echo ' <a href="index.php?lien=accueil&nomv=3&page='.$suiv.'"><h3 style="float: right; background-color: darkturquoise; width: 63px;">Suivant</h3></a>';
+			  }
 		    	
   ?>
 </body>

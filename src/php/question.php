@@ -1,29 +1,3 @@
-<?php
-  if (isset($_POST['valider'])) 
-  {
-        //efectuer une action
-        $data=file_get_contents("./asset/json/question.json");
-        $data=json_decode($data, true);
-        $membres_Admin['nbp'] = $_POST['nbp'];
-        $membres_Admin['choix'] = $_POST['choix'];
-        $membres_Admin['question'] = $_POST['question'];
-
-
-        $js = file_get_contents('./asset/json/question.json');
-
-        $js = json_decode($js, true);
-
-        $js[] = $membres_Admin;
-
-        $js = json_encode($js);
-              
-      file_put_contents("./asset/json/question.json", $js);
-    
-            
-      echo "<h2>Qustion enregistrée</h2>";
-    }
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,7 +34,6 @@
         float:left;
     }
     .te{
-        margin-left: 10%;
         background-color: silver;
         width:300px;
         height:50px;
@@ -95,15 +68,15 @@
 <fieldset>
 <form action="" id="mainform" method="POST" name="mainform">
 	<div style=" float: left; margin-right:5%;"><h2>Questons</h2></div>
-	<textarea name="question" rows="2" cols="60" class="t" id="question" ></textarea><span id="error1" ></span>
-	<div style="margin-top: 4%;"><h2>choixbre de Points</h2></div>
+	<textarea name="question" rows="2" cols="60" class="t" id="question" required><?php  echo @$_POST['question'];?></textarea><span id="error1" ></span>
+	<div style="margin-top: 4%;"><h2>Nbre de Points</h2></div>
 	<div style="margin-left: 25%; margin-top: -10%;">
-    <input type="number" name="nbp" id="nbp" style=" width: 15%;background-color: silver;" class="input1" ><br></div>
+    <input type="number" name="nbp" id="nbp" style=" width: 15%;background-color: silver;" class="input1" required><br></div>
     <span id="error2" ></span>
 	<div style="margin-bottom: 5%"><h2>Type de réponse</h2>
     <div  style="margin-left:25%; margin-top: -7%">
     
-    <select name="choix" id="weather" style="width:200px; height:40px; background-color:silver" onclick="choix(this.value)"  >
+    <select name="choix"  id="weather" style="width:200px; height:40px; background-color:silver" onclick="choix(this.value)" required >
     <option value="">Donnez le type de réponse</option>
     <option value="multiple">choix mutiple</option>
     <option value="simple">choix simple</option>
@@ -123,69 +96,6 @@
 </form>
 <script>
 
-var start = document.getElementById('button_envoi');
-var quesiton = document.getElementById('question');
-var nb = document.getElementById('nbp');
-var choix = document.getElementById('weather');
-var texte =  document.getElementById('texte');
-var simple =  document.getElementById('simple');
-var check =  document.getElementById('check');
-var validQuestion = /[a-zA-Zéè]\?$/;
-start.addEventListener('click', valider);
-
-function valider(e)
-{
-
-if(question.value == '')
-{
-    e.preventDefault();
-    error1.textContent = 'Ce champ est obligatoire';
-    error1.style.color = 'gray';
-}
-else if(validQuestion.test(question.value) == false)
-{
-    e.preventDefault();
-    error1.textContent = 'format incorrect';
-    error1.style.color = 'orange';
-}
-if(nb.value == '')
-{
-    e.preventDefault();
-    error2.textContent = 'Donner le choixbre de points svp!!!';
-    error2.style.color = 'gray';
-}
-else if(nb.value<=1)
-{
-    e.preventDefault();
-    error2.textContent = 'Le choixbre de points doit etre supérieur ou égal à 1';
-    error2.style.color = 'orange';
-}
-if(choix.value == '')
-{
-    e.preventDefault();
-    error3.textContent = 'Veuillez faire votre choix';
-    error3.style.color = 'gray';
-}
-if(!check.checked)
-{
-    e.preventDefault();
-    error4.textContent = 'Veuillez cocher au moins une case';
-    error4.style.color = 'gray';
-}
-if(texte.value == '')
-{
-    e.preventDefault();
-    error5.textContent = 'Ce champ est obligatoire';
-    error5.style.color = 'gray';
-}
-if()
-{
-    e.preventDefault();
-    error6.textContent = 'Veuillez cocher une case';
-    error6.style.color = 'gray';
-}
-}
-
 
 var nbsam = 0;
         function onAddInput()
@@ -197,11 +107,14 @@ var nbsam = 0;
             newInput.setAttribute('id', "sam_"+nbsam);
             newInput.innerHTML = `
             <label class="lab">Reponse `+nbsam+` </label>
-            <input type="text" class="te" name="reponse[]" id="texte"><span id="error5"></span>
+            <input type="text" class="te" name="reponse" required>
+            <input type="hidden" value="type texte" name="type">
            <img src="./asset/img/ic-supprimer.PNG" onclick="onDeleteInput(${nbsam})">
             `;
         divInputs.appendChild(newInput);
         }
+
+
         var nbsam = 0;
         function onAddradio()
         {
@@ -212,8 +125,9 @@ var nbsam = 0;
             newInput.setAttribute('id', "sam_"+nbsam);
             newInput.innerHTML = `
             <label class="lab">Reponse `+nbsam+` </label>
-            <input type="text" class="tes" name="reponse[]" id="texte">
-            <input type="radio" value="`+(nbsam)+`" name="check[]" id="simple"><span id="error6"></span>
+            <input type="text" class="tes" name="reponse[]" required>
+            <input type="radio" value="${nbsam-1}" name="rep1[]" required>
+            <input type="hidden" value="type radio" name="type">
            <img src="./asset/img/ic-supprimer.PNG" onclick="onDeleteInput(${nbsam})">
             `;
         divInputs.appendChild(newInput);
@@ -221,20 +135,19 @@ var nbsam = 0;
         var nbsam=0
         function onAddcheckbox()
         {
-        nbsam++;
-        if(nbsam<=2){
-        var divInputs = document.getElementById('inputs');
-        var newInput = document.createElement('div');
-        newInput.setAttribute('class', "sam");
-        newInput.setAttribute('id', "sam_"+nbsam);
-        newInput.innerHTML = `
-        <label class="lab">Reponse `+nbsam+` </label>
-        <input type="text" class="tes" name="reponse[]" id="texte>
-        <input type="checkbox" value="`+(nbsam)+`" name="check[]" id="check"><span id="error4"></span>
-       <img src="./asset/img/ic-supprimer.PNG" onclick="onDeleteInput(${nbsam})">
-        `;
+            nbsam++;
+            var divInputs = document.getElementById('inputs');
+            var newInput = document.createElement('div');
+            newInput.setAttribute('class', "sam");
+            newInput.setAttribute('id', "sam_"+nbsam);
+            newInput.innerHTML = `
+            <label class="lab">Reponse `+nbsam+` </label>
+            <input type="text" class="tes" name="reponse[]" required>
+            <input type="checkbox" name="rep2[]" value="${nbsam-1}">
+            <input type="hidden" value="type checkbox" name="type">
+           <img src="./asset/img/ic-supprimer.PNG" onclick="onDeleteInput(${nbsam})">
+            `;
         divInputs.appendChild(newInput);
-        }
         }
 function Add() {
     var select = document.getElementById('weather');
@@ -276,8 +189,107 @@ function onDeleteInput(n)
             }
         },200)
     }    
-
 </script>
+
+<?php
+  
+$reponsecorrecte=[];
+$reponsefausse=[];
+$data=file_get_contents("./asset/json/question.json");
+$data=json_decode($data, true);
+if(isset($_POST['valider']))
+{
+    $quest=$_POST['question'];
+    $nbp=$_POST['nbp'];
+    $choix=$_POST['choix'];
+if($_POST['nbp']>=1)
+{
+    if($choix=='multiple')
+    {
+        if(isset($_POST['rep2']))
+        {
+            foreach($_POST['rep2'] as $value)
+            {
+                if(!empty($_POST['reponse'][$value]))
+                {
+                    array_push($reponsecorrecte, $_POST['reponse'][$value]);
+                }
+            }
+            $reponsefausse=array_diff($_POST['reponse'], $reponsecorrecte);
+            if(file_exists("./asset/json/question.json"))
+            {
+                $liste=array(
+                    "Question" => $quest,
+                    "Point" => $nbp,
+                    "Choix" => $choix,
+                    "ReponseCorrecte" => $reponsecorrecte,
+                    "ReponseFausse" => $reponsefausse
+                );
+                array_push($data, $liste);
+                $final_data=json_encode($data);
+                file_put_contents("./asset/json/question.json", $final_data);
+                echo "<h2>Question enregistrée avec succes</h2>";
+            }
+        }
+    }
+    elseif($choix=='simple')
+    {
+        if(isset($_POST['rep1']))
+        {
+            foreach($_POST['rep1'] as $value)
+            {
+                if(!empty($_POST['reponse'][$value]))
+                {
+                    array_push($reponsecorrecte, $_POST['reponse'][$value]);
+                }
+            }
+            $reponsefausse=array_diff($_POST['reponse'], $reponsecorrecte);
+            if(file_exists("./asset/json/question.json"))
+            {
+                $liste=array(
+                    "Question" => $quest,
+                    "Point" => $nbp,
+                    "Choix" => $choix,
+                    "ReponseCorrecte" => $reponsecorrecte,
+                    "ReponseFausse" => $reponsefausse
+                );
+                array_push($data, $liste);
+                $final_data=json_encode($data);
+                file_put_contents("./asset/json/question.json", $final_data);
+                echo "<h2>Question enregistrée avec succes</h2>";
+                
+            }
+        }
+    }
+    elseif($choix=='texte')
+    {
+        if(isset($_POST['reponse']))
+        {
+            array_push($reponsecorrecte,$_POST['reponse']);
+            if(file_exists("./asset/json/question.json"))
+            {
+                $liste=array(
+                    "Question" => $quest,
+                    "Point" => $nbp,
+                    "Choix" => $choix,
+                    "ReponseCorrecte" => $reponsecorrecte,
+                    "ReponseFausse" => $reponsefausse
+                );
+                array_push($data, $liste);
+                $final_data=json_encode($data);
+                file_put_contents("./asset/json/question.json", $final_data);
+                echo "<h2>Question enregistrée avec succes</h2>";
+            }
+        }
+    }
+}
+else
+{
+    echo "<h2> Le nombre de points doit etre supérieur ou égal à 1 </h2>";
+}
+    
+}
+?>
 
 </fieldset>
 </body>

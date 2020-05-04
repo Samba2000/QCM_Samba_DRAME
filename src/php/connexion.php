@@ -36,7 +36,7 @@ if (isset($_POST['btn_submit']))
 			  <div class="input-form">
 			
 					<button type="submit" class="bnt-form" name="btn_submit">Connexion</button>
-					<a href="asset/php/jeux.php" class="link">S'inscrire pour jouer</a>
+					<a href="src/php/jeux.php" class="link">S'inscrire pour jouer</a>
 			 </div>
 
 		</form>
