@@ -202,6 +202,7 @@ if(isset($_POST['valider']))
     $quest=$_POST['question'];
     $nbp=$_POST['nbp'];
     $choix=$_POST['choix'];
+    $reponse=$_POST['reponse'];
 if($_POST['nbp']>=1)
 {
     if($choix=='multiple')
@@ -222,6 +223,7 @@ if($_POST['nbp']>=1)
                     "Question" => $quest,
                     "Point" => $nbp,
                     "Choix" => $choix,
+                    "Reponse" => $reponse,
                     "ReponseCorrecte" => $reponsecorrecte,
                     "ReponseFausse" => $reponsefausse
                 );
@@ -250,6 +252,7 @@ if($_POST['nbp']>=1)
                     "Question" => $quest,
                     "Point" => $nbp,
                     "Choix" => $choix,
+                    "Reponse" => $reponse,
                     "ReponseCorrecte" => $reponsecorrecte,
                     "ReponseFausse" => $reponsefausse
                 );
@@ -272,6 +275,7 @@ if($_POST['nbp']>=1)
                     "Question" => $quest,
                     "Point" => $nbp,
                     "Choix" => $choix,
+                    "Reponse" => $reponse,
                     "ReponseCorrecte" => $reponsecorrecte,
                     "ReponseFausse" => $reponsefausse
                 );

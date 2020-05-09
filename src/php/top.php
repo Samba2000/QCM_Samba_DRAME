@@ -5,7 +5,6 @@
 	<meta charset="utf-8">
 </head>
 <body>
-	<h2 style="text-align: center; margin-top: 1%;"><i>LISTE DES JOUEURS PAR SCORE</i></h2>
 <fieldset>
 <?php  
     $data=file_get_contents("./asset/json/user.json");
@@ -16,7 +15,10 @@
 		      		array_push($joueur, $data[$i]);
 		      	}
 		      }
-     echo "<h2><pre>Prenom               Nom                score </pre></h2></tr>";
+
+
+              echo "<fieldset>";
+     echo "<h2><pre>Prenom    Nom    score </pre></h2></tr>";
     //On définit le nombre d'éléments à afficher par page
 		  $nbreParPage=15;
 		  //Cette variable détermine la taille du tableau 
@@ -55,7 +57,7 @@
 			      { 
 			        if (array_key_exists($i, $joueur)) 
 			        {
-			          echo "<td>".$joueur[$i]['prenom']."</td> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <td>".$joueur[$i]['nom']."</td> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <td>".$joueur[$i]['score']." pts </td> <br>";
+			          echo "".$joueur[$i]['prenom']."</td> &emsp;&emsp; ".$joueur[$i]['nom']." &emsp;&emsp; ".$joueur[$i]['score']." pts  <br>";
 			        }
 			      }
 		    echo "</fieldset>";

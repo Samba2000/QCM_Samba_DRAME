@@ -7,8 +7,8 @@
 </head>
 <body >
   <form  method="POST" action="">
-    <div style="margin-left: 2%;">
-  <div style="font-size: 35px; font-family: arial;">S'inscrire</div>
+  <div style="margin-left: 2%;">
+  <div style="font-size: 35px; font-family: arial; margin-top:2%;">S'inscrire</div>
   <div style="font-size: 15px; font-family: arial">Pour proposer des QUIZZ</div><br>
   <b>Prenom</p>
   <div style="width: 100%;margin-bottom: 1%">
@@ -47,6 +47,7 @@
 				//efectuer une action
 				$data=file_get_contents("./asset/json/user.json");
         $data=json_decode($data, true);
+        
         $membres_Admin['prenom'] = $_POST['prenom'];
             $membres_Admin['nom'] = $_POST['nom'];
             $membres_Admin['login'] = $_POST['login'];
@@ -56,10 +57,14 @@
 
         for ($i=0; $i < count($data); $i++) 
         {
-          if ($membres_Admin['login']!=$data[$i]['login']) 
+          if ($data[$i]['login']==$membres_Admin['login']) 
           {
-	
-						$js = file_get_contents('./asset/json/user.json');
+            echo "<h2> Ce login existe déja</h2>";
+          }
+        break;
+        if ($data[$i]['login']!=$membres_Admin['login']) 
+          {
+            $js = file_get_contents('./asset/json/user.json');
 
 						$js = json_decode($js, true);
 
@@ -68,15 +73,9 @@
 						$js = json_encode($js);
 					
             file_put_contents("./asset/json/user.json", $js);
-          
 				  
-        	echo "<h2>Vous etes inscrit maintenant</h2>";
+          echo "<h2>Vous etes inscrit maintenant</h2>";
           }
-          else
-          {
-            echo "<h2>Ce login existe dèjà</h2>";
-          }
-           break;
         }
 			}
 		}

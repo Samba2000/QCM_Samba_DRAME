@@ -7,12 +7,13 @@
 <body style="text-align: center;">
   <div style="background-color: black;
     height: 100px;">
-<div style="background-image: url((../img/logo1.png));
+<div style="background-image: url(../../asset/img/logo1.png);
     background-size: 40% ;
-    height: 90px;
-    width: 10%;
+    height: 100px;
+    width: 11%;
     margin-left: 30px;
-    background-repeat: no-repeat;"></div>
+    background-repeat: no-repeat;">
+    </div>
 <div style="color: white;
      position: absolute;
      top: 25px;
@@ -20,7 +21,7 @@
      font-size: 30px;
      font-weight: bold;">Le Plaisir De Jouer</div>
 </div>
-<div style="background-image: url(../img/fond.jpg);
+<div style="background-image: url(../../asset/img/fond.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: -10%;
@@ -61,50 +62,49 @@
   <?php  
   include ('fonction.php');
   if (isset($_POST['login']) and isset($_POST['password'])) 
-		{
-			if (valid_Prenom($_POST['prenom']) && valid_Nom($_POST['nom']) && valid_password($_POST['password'], $_POST['cpassword'])) 
-			{
-			 $dossier = './asset/img/';
-				//efectuer une action
-				$data=file_get_contents("./asset/json/user.json");
-        $data=json_decode($data, true);
+  {
+    if (valid_Prenom($_POST['prenom']) && valid_Nom($_POST['nom']) && valid_password($_POST['password'], $_POST['cpassword'])) 
+    {
+      $dossier = '../../asset/img/';
+      //efectuer une action
+      $data=file_get_contents("../../asset/json/user.json");
+      $data=json_decode($data, true);
+      
+      $membres_Admin['prenom'] = $_POST['prenom'];
+          $membres_Admin['nom'] = $_POST['nom'];
+          $membres_Admin['login'] = $_POST['login'];
+          $membres_Admin['password'] = $_POST['password'];
+          $membres_Admin['profil'] = "joueur";
+					$membres_Admin['date'] = date("d/m/Y  H:i");
+          $membres_Admin['score'] = 0;
+          $membres_Admin['photo'] = $dossier."mounass.jpg";
 
-						$membres_Admin['prenom'] = $_POST['prenom'];
-						$membres_Admin['nom'] = $_POST['nom'];
-						$membres_Admin['login'] = $_POST['login'];
-						$membres_Admin['password'] = $_POST['password'];
-            $membres_Admin['profil'] = "joueur";
-						$membres_Admin['date'] = date("d/m/Y  H:i");
-            $membres_Admin['score'] = 0;
-						$membres_Admin['photo'] = $dossier;
-
-	 	for ($i=0; $i < count($data); $i++) 
+      for ($i=0; $i <= count($data); $i++) 
+      {
+        if ($membres_Admin['login']!=$data[$i]['login']) 
         {
-          if ($membres_Admin['login']!=$data[$i]['login']) 
-          {
-  
-            $js = file_get_contents('./asset/json/user.json');
 
-            $js = json_decode($js, true);
+          $js = file_get_contents('../../asset/json/user.json');
 
-            $js[] = $membres_Admin;
+          $js = json_decode($js, true);
 
-            $js = json_encode($js);
-          
-            file_put_contents("./asset/json/user.json", $js);
-          
-          
-          header("location: jouer.php");
-          }
-          else
-          {
-            echo "<h2>Ce login existe dèjà</h2>";
-          }
-           break;
+          $js[] = $membres_Admin;
+
+          $js = json_encode($js);
+        
+          file_put_contents("../../asset/json/user.json", $js);
+        
+        
+        echo "<h2>Vous etes inscrit maintenant</h2>";
         }
-	
-			}
-		}
+        else
+        {
+          echo "<h2>Ce login existe dèjà</h2>";
+        }
+         break;
+      }
+    }
+  }
   ?>
 </form>
 </div>

@@ -13,6 +13,7 @@ function connexion($login,$pwd)
 			$_SESSION['prenom']=$user['prenom'];
 			$_SESSION['user'] = $user;
 			$_SESSION['photo']=$user['photo'];
+			$_SESSION['score']=$user['score'];
 			$_SESSION['statut']="login";
 			if ($user["profil"]==="user") 
 			{

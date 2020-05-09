@@ -1,1 +1,272 @@
-[{"Question":"La capitale du S\u00e9n\u00e9gal est:","Point":"2","Choix":"multiple","ReponseCorrecte":["Dakar"],"ReponseFausse":{"1":"Kaolack","2":"Thies"}},{"Question":"Le nombre de voyelles dans le nom Samba est:","Point":"2","Choix":"simple","ReponseCorrecte":["2"],"ReponseFausse":{"1":"3"}},{"Question":"De quel pays \u00e9tait-il une colonie?","Point":"2","Choix":"simple","ReponseCorrecte":["La France"],"ReponseFausse":{"1":"L'espagne"}},{"Question":"Quels sont les climats du S\u00e9n\u00e9gal?","Point":"1","Choix":"multiple","ReponseCorrecte":["D\u00e9sertique au nord","Tropical au sud"],"ReponseFausse":{"0":"D\u00e9sertique au sud","3":"Tro\u00eecal au nord"}},{"Question":"Quel est l'hymne national du S\u00e9n\u00e9gal ?","Point":"2","Choix":"texte","ReponseCorrecte":["Le Lion rouge"],"ReponseFausse":[]},{"Question":"Quelle est la devise nationale du S\u00e9n\u00e9gal ?","Point":"2","Choix":"texte","ReponseCorrecte":["Un Peuple, Un But, Une Foi"],"ReponseFausse":[]},{"Question":"Quelle est la monnaie utilis\u00e9e au S\u00e9n\u00e9gal?","Point":"2","Choix":"multiple","ReponseCorrecte":["Le franc CFA"],"ReponseFausse":{"0":"Le franc s\u00e9n\u00e9galais","2":"Le colon s\u00e9n\u00e9galais"}},{"Question":"Quelle est la langue officielle qu S\u00e9n\u00e9gal?","Point":"2","Choix":"simple","ReponseCorrecte":["Le fran\u00e7ais"],"ReponseFausse":{"1":"Le s\u00e9n\u00e9galais"}},{"Question":"Kaolack est:","Point":"2","Choix":"multiple","ReponseCorrecte":["une  ville","une r\u00e9gion"],"ReponseFausse":{"0":"un village","2":"commune"}},{"Question":"Le S\u00e9n\u00e9gal comporte:","Point":"1","Choix":"multiple","ReponseCorrecte":["14 r\u00e9gions"],"ReponseFausse":{"0":"12 r\u00e9gions","2":"18 r\u00e9gions"}},{"Question":"Kaolack est le carrefour?","Point":"2","Choix":"simple","ReponseCorrecte":["oui"],"ReponseFausse":{"1":"non"}},{"Question":"Kaolack est le carrefour?","Point":"2","Choix":"simple","ReponseCorrecte":["oui"],"ReponseFausse":{"1":"non"}},{"Question":"Kaolack se situe au centre du S\u00e9n\u00e9gal. Oui ou non?","Point":"1","Choix":"texte","ReponseCorrecte":["Oui"],"ReponseFausse":[]},{"Question":"Qui est le fondateur du mouridisme?","Point":"2","Choix":"multiple","ReponseCorrecte":["Cheikh Ahmadou Bamba"],"ReponseFausse":{"0":"Baye Niasse","2":"El Hadji Malick Sy"}},{"Question":"Quel ouvrage religieux fut \u00e9crit d'apr\u00e8s le r\u00e9cit des songes d'un proph\u00e8te ? ","Point":"2","Choix":"simple","ReponseCorrecte":["Le Coran"],"ReponseFausse":{"1":"La Bible"}},{"Question":"Lequel de ces animaux n'est pas un mammif\u00e8re ?","Point":"2","Choix":"simple","ReponseCorrecte":["baleine"],"ReponseFausse":{"0":"dauphin","2":"requin"}},{"Question":"Quelle est la capitale de Zimbabwe?","Point":"1","Choix":"texte","ReponseCorrecte":["Harare"],"ReponseFausse":[]},{"Question":" Dans quel balise HTML pla\u00e7ons-nous le code JavaScript?","Point":"2","Choix":"multiple","ReponseCorrecte":["La balise script"],"ReponseFausse":[" La balise js"," La balise javascript"]},{"Question":"Comment faire appelle \u00e0 une fonction nomm\u00e9e \u00ab sum \u00bb?","Point":"1","Choix":"simple","ReponseCorrecte":["sum()"],"ReponseFausse":{"1":"call function sum()","2":"aucune r\u00e9ponse vraie"}},{"Question":"Quelle est la syntaxe correcte pour faire r\u00e9f\u00e9rence \u00e0 un script externe appel\u00e9 \u00ab myscript.js \u00bb?","Point":"2","Choix":"multiple","ReponseCorrecte":["<script src=\"myscript.js\">"],"ReponseFausse":{"0":"<script href=\"myscript.js\">","1":"<script name=\"myscript.js\">","3":"Tous les r\u00e9ponses sont vraies"}},{"Question":"Le fichier externe de JavaScript doit contenir la balise <script>. vrai ou faux?","Point":"2","Choix":"texte","ReponseCorrecte":["faux"],"ReponseFausse":[]}]
+[
+    {
+        "Question": "Qui est l'actuel pr\u00e9sident du S\u00e9n\u00e9gal?",
+        "Point": "2",
+        "Choix": "simple",
+        "Reponse": [
+            "Macky Sall",
+            "Abdoulaye Wade"
+        ],
+        "ReponseCorrecte": [
+            "Macky Sall"
+        ],
+        "ReponseFausse": {
+            "1": "Abdoulaye Wade"
+        }
+    },
+    {
+        "Question": "Combien de fleuves traversent le S\u00e9n\u00e9gal?",
+        "Point": "2",
+        "Choix": "simple",
+        "Reponse": [
+            "Deux",
+            "Trois",
+            "Aucun"
+        ],
+        "ReponseCorrecte": [
+            "Aucun"
+        ],
+        "ReponseFausse": [
+            "Deux",
+            "Trois"
+        ]
+    },
+    {
+        "Question": "Qu'est ce qui est le djamandong?",
+        "Point": "2",
+        "Choix": "multiple",
+        "Reponse": [
+            "Une grande pelle pour retourner la terre des rizi\u00e8res",
+            "Une danse Mandingue",
+            "Un f\u00e9tiche bassari",
+            "un \u00e9chassier"
+        ],
+        "ReponseCorrecte": [
+            "Une danse Mandingue"
+        ],
+        "ReponseFausse": {
+            "0": "Une grande pelle pour retourner la terre des rizi\u00e8res",
+            "2": "Un f\u00e9tiche bassari",
+            "3": "un \u00e9chassier"
+        }
+    },
+    {
+        "Question": "Qui a compos\u00e9 la musique de l'hymne national du S\u00e9n\u00e9gal?",
+        "Point": "2",
+        "Choix": "simple",
+        "Reponse": [
+            "Senghor",
+            "Herbert Peper",
+            "Les Toures kunda",
+            "Cheikh Ndigal Lo"
+        ],
+        "ReponseCorrecte": [
+            "Herbert Peper"
+        ],
+        "ReponseFausse": {
+            "0": "Senghor",
+            "2": "Les Toures kunda",
+            "3": "Cheikh Ndigal Lo"
+        }
+    },
+    {
+        "Question": "Quelle \u00e9tait l'ancienne capitale du S\u00e9n\u00e9gal?",
+        "Point": "2",
+        "Choix": "simple",
+        "Reponse": [
+            "Dakar",
+            "Saint-Louis",
+            "Kaolack",
+            "Thies"
+        ],
+        "ReponseCorrecte": [
+            "Saint-Louis"
+        ],
+        "ReponseFausse": {
+            "0": "Dakar",
+            "2": "Kaolack",
+            "3": "Thies"
+        }
+    },
+    {
+        "Question": "Comment s'appellent les fran\u00e7ais qui vivent au S\u00e9n\u00e9gal",
+        "Point": "2",
+        "Choix": "multiple",
+        "Reponse": [
+            "Les Fran\u00e7ais-S\u00e9n\u00e9galais",
+            "Les S\u00e9n\u00e9gaulois",
+            "Les S\u00e9n\u00e9fran\u00e7ais"
+        ],
+        "ReponseCorrecte": [
+            "Les S\u00e9n\u00e9gaulois"
+        ],
+        "ReponseFausse": {
+            "0": "Les Fran\u00e7ais-S\u00e9n\u00e9galais",
+            "2": "Les S\u00e9n\u00e9fran\u00e7ais"
+        }
+    },
+    {
+        "Question": "Quel est l'arbre qui est dit sacr\u00e9? ",
+        "Point": "2",
+        "Choix": "simple",
+        "Reponse": [
+            "Le chene",
+            "L'acacia",
+            "La palmier",
+            "Le baobab"
+        ],
+        "ReponseCorrecte": [
+            "Le baobab"
+        ],
+        "ReponseFausse": [
+            "Le chene",
+            "L'acacia",
+            "La palmier"
+        ]
+    },
+    {
+        "Question": "Pourquoi le baobab \u00e9tait sacr\u00e9?",
+        "Point": "2",
+        "Choix": "multiple",
+        "Reponse": [
+            "car on mettait des morts dedans",
+            "car ces fruits gu\u00e9rissaient les maladies",
+            "car les singes vivaient dedans"
+        ],
+        "ReponseCorrecte": [
+            "car on mettait des morts dedans"
+        ],
+        "ReponseFausse": {
+            "1": "car ces fruits gu\u00e9rissaient les maladies",
+            "2": "car les singes vivaient dedans"
+        }
+    },
+    {
+        "Question": "Comment s'appelle le fruit du baobab?",
+        "Point": "2",
+        "Choix": "texte",
+        "Reponse": "Pain de singe",
+        "ReponseCorrecte": [
+            "Pain de singe"
+        ],
+        "ReponseFausse": []
+    },
+    {
+        "Question": "Le S\u00e9n\u00e9gal est devenu ind\u00e9pendant en:",
+        "Point": "1",
+        "Choix": "simple",
+        "Reponse": [
+            "1980",
+            "1972",
+            "1960"
+        ],
+        "ReponseCorrecte": [
+            "1960"
+        ],
+        "ReponseFausse": [
+            "1980",
+            "1972"
+        ]
+    },
+    {
+        "Question": "Quelles sont les religions pratiqu\u00e9es au S\u00e9n\u00e9gal?",
+        "Point": "2",
+        "Choix": "simple",
+        "Reponse": [
+            "Islam et Christianisme",
+            "Christianisme, islam et Animisme",
+            "Judaisme et Boudhisme",
+            "Judaisme, Islam et Christianisme"
+        ],
+        "ReponseCorrecte": [
+            "Christianisme, islam et Animisme"
+        ],
+        "ReponseFausse": {
+            "0": "Islam et Christianisme",
+            "2": "Judaisme et Boudhisme",
+            "3": "Judaisme, Islam et Christianisme"
+        }
+    },
+    {
+        "Question": "Sur quelle ile se trouve une des plus vieilles maisons des esclaves?",
+        "Point": "2",
+        "Choix": "multiple",
+        "Reponse": [
+            "L'ile de Madeleine",
+            "L'ile de Gor\u00e9e",
+            "L'ile de St jean"
+        ],
+        "ReponseCorrecte": [
+            "L'ile de Gor\u00e9e"
+        ],
+        "ReponseFausse": {
+            "0": "L'ile de Madeleine",
+            "2": "L'ile de St jean"
+        }
+    },
+    {
+        "Question": "La polygamie est autoris\u00e9e au S\u00e9n\u00e9gal. Vrai ou faux?",
+        "Point": "1",
+        "Choix": "texte",
+        "Reponse": "vrai",
+        "ReponseCorrecte": [
+            "vrai"
+        ],
+        "ReponseFausse": []
+    },
+    {
+        "Question": "Comment les gens qui travaillent dans le lac Rose pour r\u00e9cup\u00e9rer du sel se prot\u00e8gent contre le sel?",
+        "Point": "2",
+        "Choix": "multiple",
+        "Reponse": [
+            "Ils se prot\u00e8gent avec de l'argile",
+            "Ils se prot\u00e8gent avec du lait de coco",
+            "Ils se prot\u00e8gent avec du beurre de karit\u00e9",
+            "Ils se prot\u00e8gent des huiles essentielles"
+        ],
+        "ReponseCorrecte": [
+            "Ils se prot\u00e8gent avec du beurre de karit\u00e9"
+        ],
+        "ReponseFausse": {
+            "0": "Ils se prot\u00e8gent avec de l'argile",
+            "1": "Ils se prot\u00e8gent avec du lait de coco",
+            "3": "Ils se prot\u00e8gent des huiles essentielles"
+        }
+    },
+    {
+        "Question": "Quel est le deuxi\u00e8me nom de la lotte au S\u00e9n\u00e9gal?",
+        "Point": "2",
+        "Choix": "simple",
+        "Reponse": [
+            "Le poisson antilope",
+            "Le poisson perroquet",
+            "Le poisson kangourou"
+        ],
+        "ReponseCorrecte": [
+            "Le poisson perroquet"
+        ],
+        "ReponseFausse": {
+            "0": "Le poisson antilope",
+            "2": "Le poisson kangourou"
+        }
+    },
+    {
+        "Question": "Que signifie \"S\u00e9n\u00e9gal\"?",
+        "Point": "1",
+        "Choix": "simple",
+        "Reponse": [
+            "Notre chance",
+            "Notre vie",
+            "Notre pirogue",
+            "Notre ami"
+        ],
+        "ReponseCorrecte": [
+            "Notre pirogue"
+        ],
+        "ReponseFausse": {
+            "0": "Notre chance",
+            "1": "Notre vie",
+            "3": "Notre ami"
+        }
+    }
+]

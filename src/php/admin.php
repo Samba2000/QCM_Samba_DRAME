@@ -76,7 +76,7 @@ echo "<div style='margin-left: 35%; margin-top: -24%;'>";
     <?php  
     if (isset($_GET['nomv'])) 
     	{    		if ($_GET['nomv']=="1") {
-    				include_once("creer_questions.php");
+    				include_once("fixe_modifie.php");
     			}
     			elseif($_GET['nomv']=="2") 
     			{
