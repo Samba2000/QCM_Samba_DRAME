@@ -4,13 +4,16 @@
 function connexion($login,$pwd)
 {
 	$users=chargement();
+	$i=0;
 	foreach ($users as $user) 
 	{
+		$i++;
 		if ($user["login"]==$login && $user["password"]===$pwd) 
 		{
 
 			$_SESSION['nom']=$user['nom'];
 			$_SESSION['prenom']=$user['prenom'];
+			$_SESSION['login']=$user['login'];
 			$_SESSION['user'] = $user;
 			$_SESSION['photo']=$user['photo'];
 			$_SESSION['score']=$user['score'];
@@ -24,7 +27,6 @@ function connexion($login,$pwd)
 			{
 				return "jeux";
 			}
-
 		}
 	}
 

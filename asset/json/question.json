@@ -1,5 +1,60 @@
 [
     {
+        "Question": "Comment les gens qui travaillent dans le lac Rose pour r\u00e9cup\u00e9rer du sel se prot\u00e8gent contre le sel?",
+        "Point": "2",
+        "Choix": "multiple",
+        "Reponse": [
+            "Ils se prot\u00e8gent avec de l'argile",
+            "Ils se prot\u00e8gent avec du lait de coco",
+            "Ils se prot\u00e8gent avec du beurre de karit\u00e9",
+            "Ils se prot\u00e8gent des huiles essentielles"
+        ],
+        "ReponseCorrecte": [
+            "Ils se prot\u00e8gent avec du beurre de karit\u00e9"
+        ],
+        "ReponseFausse": {
+            "0": "Ils se prot\u00e8gent avec de l'argile",
+            "1": "Ils se prot\u00e8gent avec du lait de coco",
+            "3": "Ils se prot\u00e8gent des huiles essentielles"
+        }
+    },
+    {
+        "Question": "Quel est le deuxi\u00e8me nom de la lotte au S\u00e9n\u00e9gal?",
+        "Point": "2",
+        "Choix": "simple",
+        "Reponse": [
+            "Le poisson antilope",
+            "Le poisson perroquet",
+            "Le poisson kangourou"
+        ],
+        "ReponseCorrecte": [
+            "Le poisson perroquet"
+        ],
+        "ReponseFausse": {
+            "0": "Le poisson antilope",
+            "2": "Le poisson kangourou"
+        }
+    },
+    {
+        "Question": "Que signifie \"S\u00e9n\u00e9gal\"?",
+        "Point": "2",
+        "Choix": "simple",
+        "Reponse": [
+            "Notre chance",
+            "Notre vie",
+            "Notre pirogue",
+            "Notre ami"
+        ],
+        "ReponseCorrecte": [
+            "Notre pirogue"
+        ],
+        "ReponseFausse": {
+            "0": "Notre chance",
+            "1": "Notre vie",
+            "3": "Notre ami"
+        }
+    },
+    {
         "Question": "Qui est l'actuel pr\u00e9sident du S\u00e9n\u00e9gal?",
         "Point": "2",
         "Choix": "simple",
@@ -213,60 +268,5 @@
             "vrai"
         ],
         "ReponseFausse": []
-    },
-    {
-        "Question": "Comment les gens qui travaillent dans le lac Rose pour r\u00e9cup\u00e9rer du sel se prot\u00e8gent contre le sel?",
-        "Point": "2",
-        "Choix": "multiple",
-        "Reponse": [
-            "Ils se prot\u00e8gent avec de l'argile",
-            "Ils se prot\u00e8gent avec du lait de coco",
-            "Ils se prot\u00e8gent avec du beurre de karit\u00e9",
-            "Ils se prot\u00e8gent des huiles essentielles"
-        ],
-        "ReponseCorrecte": [
-            "Ils se prot\u00e8gent avec du beurre de karit\u00e9"
-        ],
-        "ReponseFausse": {
-            "0": "Ils se prot\u00e8gent avec de l'argile",
-            "1": "Ils se prot\u00e8gent avec du lait de coco",
-            "3": "Ils se prot\u00e8gent des huiles essentielles"
-        }
-    },
-    {
-        "Question": "Quel est le deuxi\u00e8me nom de la lotte au S\u00e9n\u00e9gal?",
-        "Point": "2",
-        "Choix": "simple",
-        "Reponse": [
-            "Le poisson antilope",
-            "Le poisson perroquet",
-            "Le poisson kangourou"
-        ],
-        "ReponseCorrecte": [
-            "Le poisson perroquet"
-        ],
-        "ReponseFausse": {
-            "0": "Le poisson antilope",
-            "2": "Le poisson kangourou"
-        }
-    },
-    {
-        "Question": "Que signifie \"S\u00e9n\u00e9gal\"?",
-        "Point": "1",
-        "Choix": "simple",
-        "Reponse": [
-            "Notre chance",
-            "Notre vie",
-            "Notre pirogue",
-            "Notre ami"
-        ],
-        "ReponseCorrecte": [
-            "Notre pirogue"
-        ],
-        "ReponseFausse": {
-            "0": "Notre chance",
-            "1": "Notre vie",
-            "3": "Notre ami"
-        }
     }
 ]

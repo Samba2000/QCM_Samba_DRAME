@@ -53,18 +53,14 @@
             $membres_Admin['login'] = $_POST['login'];
             $membres_Admin['password'] = $_POST['password'];
             $membres_Admin['profil'] = "user";
-            $membres_Admin['photo'] = $dossier."mounass.jpg";
+            $membres_Admin['photo'] = $dossier."matar.jpg";
 
         for ($i=0; $i < count($data); $i++) 
         {
-          if ($data[$i]['login']==$membres_Admin['login']) 
+          if ($membres_Admin['login']!=$data[$i]['login']) 
           {
-            echo "<h2> Ce login existe déja</h2>";
-          }
-        break;
-        if ($data[$i]['login']!=$membres_Admin['login']) 
-          {
-            $js = file_get_contents('./asset/json/user.json');
+	
+						$js = file_get_contents('./asset/json/user.json');
 
 						$js = json_decode($js, true);
 
@@ -73,9 +69,15 @@
 						$js = json_encode($js);
 					
             file_put_contents("./asset/json/user.json", $js);
+          
 				  
-          echo "<h2>Vous etes inscrit maintenant</h2>";
+        	echo "<h2>Vous etes inscrit maintenant</h2>";
           }
+          else
+          {
+            echo "<h2>Ce login existe dèjà</h2>";
+          }
+           break;
         }
 			}
 		}
