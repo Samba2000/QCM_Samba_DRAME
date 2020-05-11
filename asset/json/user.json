@@ -1,1 +1,19 @@
-[{"prenom":"Samba","nom":"Drame","login":"Samba","password":"drame20","profil":"user","photo":".\/asset\/img\/samba.jpg"},{"nom":"DRAME","prenom":"Samba","login":"joueur","password":"drame20","profil":"joueur","score":19,"photo":".\/asset\/img\/samba.jpg"}]
+[
+    {
+        "prenom": "Samba",
+        "nom": "Drame",
+        "login": "admin",
+        "password": "admin",
+        "profil": "user",
+        "photo": ".\/asset\/img\/samba.jpg"
+    },
+    {
+        "nom": "DRAME",
+        "prenom": "Samba",
+        "login": "joueur",
+        "password": "joueur",
+        "profil": "joueur",
+        "score": 19,
+        "photo": ".\/asset\/img\/samba.jpg"
+    }
+]

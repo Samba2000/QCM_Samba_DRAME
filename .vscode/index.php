@@ -20,11 +20,11 @@ if (isset($_GET['lien']))
 {
 	if ($_GET['lien']=='accueil')
 	{
-	 		require_once("src/php/admin.php");
+	 		require_once("./src/php/admin.php");
 	}
 elseif ($_GET['lien']=='jeux')
 	{
-		require_once("src/php/jouer.php");
+		require_once("./src/php/jouer.php");
 	 } 
 	
 }
@@ -34,7 +34,7 @@ else
 	{
 		deconnexion();
 	}
-	require_once("src/php/connexion.php");
+	require_once("./src/php/connexion.php");
 }
 
 ?>
